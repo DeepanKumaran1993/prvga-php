@@ -24,7 +24,7 @@ class Student_List
         //   </tr>
         //   </thead>
         //   </table>";
-        echo '<table class="table">
+        echo '<pre><table class="table" border=1>
         <thead>
         <tr>
           <th scope="col">id</th>
@@ -33,7 +33,9 @@ class Student_List
           <th scope="col">Email </th>
           <th scope="col">Delete </th>
         </tr>
-      </thead>';
+      </thead>
+      </table></pre>'
+      ;
           
 
         while ($row = $stmt->fetch()) {
@@ -66,7 +68,7 @@ class Student_List
 
             // <input type='submit' value='delete one'>
             
-      echo"   <table class='table'>
+      echo"   <table class='table' border=1>
            
             <tbody>
               <tr>
@@ -75,7 +77,7 @@ class Student_List
                 <td>$email</td>
                 <td>$lastName</td>
                 <td> 
-                     <form action='/websites/class/delete.php' method='post'>
+                     <form action='/websites/class/Delete.php' method='post'>
                      <input type='hidden' name='id' value='$id' >
                     
                      <button type='submit' class='btn btn-primary'>Delete</button>
@@ -89,7 +91,6 @@ class Student_List
 
 
         }
-
 
 
 

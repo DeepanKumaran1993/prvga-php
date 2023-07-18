@@ -2,6 +2,8 @@
     "name": "ssltp11355/websites",
     "require": {
         "react/http":"*",
-        "react/socket":"*"
+        "react/socket":"*",
+        "php-ds/php-ds":"^1.4"
+            
     }
 }

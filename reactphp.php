@@ -15,7 +15,7 @@
 
 
 
-// require __DIR__ . '/vendor/autoload.php';
+ require __DIR__ . '/vendor/autoload.php';
 
 // $http = new React\Http\HttpServer(function (Psr\Http\Message\ServerRequestInterface $request) {
 //     return React\Http\Message\Response::plaintext(
@@ -51,31 +51,29 @@
 
 
 
-require __DIR__ . '/vendor/autoload.php'; 
+// require __DIR__ . '/vendor/autoload.php';
 // Importing classes into the project
 
-$loop = \React\EventLoop\Factory::create();
+// $loop = \React\EventLoop\Loop::get();
 
-$loop->addTimer(2, 
-  function(){ 
-    // Using a timer to start a task after 2 seconds
-    echo "Request 1" .PHP_EOL;
-  }
-);
+// $loop->addTimer(
+//   2,
+//   function () {
+//     // Using a timer to start a task after 2 seconds
+//     echo "Request 1" . PHP_EOL;
+//   }
+// );
 
-$loop->addTimer(10, 
-  function(){ 
-    // Using a timer to start a second task after 10 seconds
-    echo "Request 2" .PHP_EOL;
-  }
-);
+// $loop->addTimer(
+//   1,
+//   function () {
+//     // Using a timer to start a second task after 10 seconds
+//     echo "Request 2" . PHP_EOL;
+//   }
+// );
 
-$loop->run(); 
-  // Starting the event loop
-
-
-
-
+// $loop->run();
+// // Starting the event loop
 
 
 
@@ -86,6 +84,43 @@ $loop->run();
 
 
 
+
+// require 'vendor/autoload.php';
+// $loop = React\EventLoop\Loop::get();
+
+// function handleRequest(Psr\Http\Message\ServerRequestInterface $request): React\Promise\PromiseInterface {
+//   return React\Promise\resolve()->then(function () use ($request) {
+//       // Handle the request asynchronously and return the appropriate response
+//   });
+// }
+// $server = new React\Http\HttpServer($loop, function (Psr\Http\Message\ServerRequestInterface $request) {
+//   return handleRequest($request);
+// });
+// $socket = new React\Socket\SocketServer('0.0.0.0:8000', $this->loop);
+// $server->listen($socket);
+// $loop->run();
+
+
+
+// $que=new \Ds\Queue();
+// $que->push("hai");
+// $que->push("hello");
+
+// var_dump($que->capacity());
+
+
+function run()
+{
+    static $a = 0;
+    if ($a < 3) {
+        $a++;
+        echo $a;
+    }
+}
+
+echo run();
+echo run();
+echo run();
 
 
 

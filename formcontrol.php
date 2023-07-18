@@ -3,7 +3,10 @@
 // include("/xampp/htdocs/websites/class.php.file/DbConnection.php");
 include("header.html");
 include "/xampp/htdocs/websites/class/DbConnection.php";
-include "/xampp/htdocs/websites/class/AddStudent.php";
+include '/xampp/htdocs/websites/class/AddStudent.php';
+//include '/xampp/htdocs/websites/class/queue.php';
+//require '/xampp/htdocs/websites/vendor/autoload.php';
+//include '/xampp/htdocs/websites/class/formcon.php';
 
 //require_once('db_Connection.php');
 ?>
@@ -72,8 +75,6 @@ include "/xampp/htdocs/websites/class/AddStudent.php";
 
 
 
-
-
   <!-- <button onclick= method="post" action="formcontrol.php">All student Details</button> -->
   <!-- <form action="student_details.php" method ="post">
             <input type="submit" name="student" value="get Student"><br>
@@ -99,9 +100,56 @@ include "/xampp/htdocs/websites/class/AddStudent.php";
 // unset($var);
 // echo "in the var ".$var;
 // if(!empty($var) ){
-                       $post = new AddStudent();
-                       $post->check_Connection($connection);
 
+
+
+
+
+
+//adding queue for mangeing in using tome stamp
+
+                      //  date_default_timezone_set('Asia/Kolkata');
+                      //  //session_start();
+                      //  $time=date("h:i:s");
+                      //  $_SESSION["time"]=$time;
+                       //echo gettype($time).PHP_EOL;
+                       //echo strlen($time).PHP_EOL;
+                      // $time_Split=explode(":", $time);
+                       //var_dump($time_Split[2]);
+                       //echo $time_Split;
+                     //  $queu=new \Ds\Queue();
+
+                     
+
+
+
+                       $post = new AddStudent;
+                       $post->check_Connection($connection);
+                     //  var_dump( $post->$deleted_Id);
+                      
+                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //  $f_name = filter_input(INPUT_POST, "f_Name", FILTER_SANITIZE_SPECIAL_CHARS);
+        //  $l_name = filter_input(INPUT_POST, "l_Name", FILTER_SANITIZE_SPECIAL_CHARS);
+        //  $email_id = filter_input(INPUT_POST, "email_Id", FILTER_VALIDATE_EMAIL);
+        // //  $data=($f_name);
+        // //  $data=($l_name);
+        // //  $data=($email_id);
+        // //  var_dump($data);
+        //         $add->push($f_name, $l_name, $email_id);
+        //         var_dump($add);
 
 
 

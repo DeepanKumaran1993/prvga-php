@@ -1,5 +1,5 @@
 <?php
-include "/xampp/htdocs/websites/db_Connection.php";
+include "/xampp/htdocs/websites/class/DbConnection.php";
 include("header.html");
 //include("delete_student.php");
 ?>
@@ -38,10 +38,10 @@ include("header.html");
 
 <body>
     <?php
-    $db=new Get_connection();
-    $conn=$db->establish_connection();
-    $list = new Student_List();
-    $list->get_Student($conn);
+   // $db=new Get_connection();
+    // $conn=$connection;
+    // $list = new Student_List();
+    // $list->get_Student($conn);
     ?>
 </body>
 </html>
@@ -51,58 +51,66 @@ include("header.html");
 
 
 <?php
-class Student_List
-{
-    public static function  delete_id()
-    {
-        echo "it's in the method";
-    }
-    function get_Student($conn)
-    {
-        $sql_get = "SELECT *  FROM student_details";
-        $stmt = $conn->query($sql_get);
-        echo "<table border=1 cellspacing=1 cellpadding=1>
-          <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>email</th>
-            <th>Password </th>
-          </tr>
-          </table>";
+// class Student_List
+// {
+//     public static function  delete_id()
+//     {
+//         echo "it's in the method";
+//     }
+//     function get_Student($conn)
+//     {
+//         $sql_get = "SELECT *  FROM student_details";
+//         $stmt = $conn->query($sql_get);
+//         echo "<table border=1 cellspacing=1 cellpadding=1>
+//           <tr>
+//             <th>id</th>
+//             <th>name</th>
+//             <th>email</th>
+//             <th>Password </th>
+//           </tr>
+//           </table>";
 
-        while ($row = $stmt->fetch()) {
-            // echo $row['Name'].'<br>';
-
-
-            $id = $row["id"];
-            $name2 = $row["Name"];
-            $email = $row["Email"];
-            $lastName = $row["last_Name"];
+//         while ($row = $stmt->fetch()) {
+//             // echo $row['Name'].'<br>';
 
 
-            echo "<table border=1  >
-                    <tr>  
-                    <td><font color=green>$id</font></td>
-                    <td><font color=green>$name2</font></td>
-                    <td><font color=green>$email</font></td>
-                    <td><font color=green>$lastName</font></td>
-                    <td> 
-                    <form action='delete_student.php' method='post'>
-                    <input type='hidden' name='id' value='$id' >
-                    <input type='submit' value='delete one'>
-                    </form>
-                    </td>
-                </tr>
+//             $id = $row["id"];
+//             $name2 = $row["Name"];
+//             $email = $row["Email"];
+//             $lastName = $row["last_Name"];
+
+
+//             echo "<table border=1  >
+//                     <tr>  
+//                     <td><font color=green>$id</font></td>
+//                     <td><font color=green>$name2</font></td>
+//                     <td><font color=green>$email</font></td>
+//                     <td><font color=green>$lastName</font></td>
+//                     <td> 
+//                     <form action='Listing.php' method='post'>
+//                     <input type='hidden' name='delete_id' value='$id' >
+//                     <input type='submit' value='delete one'>
+//                     </form>
+//                     </td>
+//                 </tr>
                 
-            </table>";
-        }
+//             </table>";
+//         }
 
 
 
 
-        $conn = null;
-    }
-}
+//         $conn = null;
+//     }
+// }
+?>
+<?php 
+// include "/xampp/htdocs/websites/class/Delete.php";
+
+// $deleting_ID=new Delete();
+// $deleting_ID->to_Delete($connection,$_POST["id"]);
+
+
 ?>
 
 
