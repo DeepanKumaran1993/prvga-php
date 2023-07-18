@@ -10,7 +10,7 @@
 <body>
 
 <label> Student form</label>
-    <form action="Adding.php" method="post">
+    <form action="Addingdsent.php" method="post">
 
         <input type="text" name="f_Name" placeholder="FirstName"><br>
         <input type="text" name="l_Name" placeholder="LastName"><br>
